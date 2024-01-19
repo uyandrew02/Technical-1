@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume - Andrew Uy</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; 
+    color: black;
+    position: relative;
+  }
+  .resume-container {
+    width: 40%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    position: relative;
+  }
+  .header {
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    transform: translateX(-50%);
+  }
+  .content-block {
+    margin-bottom: 20px;
+  }
+  .content-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .change-color {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .change-color:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+</style>
+</head>
+<body>
+
+<button class="change-color">Change Color</button>
+
+<div class="resume-container">
+  <div class="header">
+    <img src="https://scontent.fmnl8-2.fna.fbcdn.net/v/t1.15752-9/416060106_1024093878695653_4178713889320867105_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeG6glBRS7HVGDjaxWku6hx4xpFomZmWyfnGkWiZmZbJ-Zdvfvxop97XEGvW-uzEfIIqsWvOr9i4sJn7erS7lTfk&_nc_ohc=F7r4WdWWjlgAX9SEwUL&_nc_ht=scontent.fmnl8-2.fna&oh=03_AdRpxURNFH4Ea4-xa-ixPbqWkiR2a02tuf-xWR9TCW3yfA&oe=65D21284" />
+    <h1>Andrew Uy</h1>
+    <p>Address: Pasay City</p>
+    <p>Contact No.: 09176751202</p>
+    <p>Email: uyandrew02@gmail.com</p>
+  </div>
+  <div class="content-block">
+    <div class="content-title">OBJECTIVE:</div>
+    <p>As a dedicated IT student with a strong foundation in computer science and hands-on experience in programming and systems analysis, I am eager to apply my technical expertise and innovative thinking to real-world challenges. With a passion for continuous learning and improvement, I aim to contribute to an organization that values technological advancement and offers opportunities for professional development. I am particularly interested in roles that will allow me to leverage my problem-solving abilities and my commitment to delivering high-quality solutions.</p>
+  </div>
+  <p>.......................................................................................................................................</p>
+  <div class="content-block">
+    <div class="content-title">ACADEMIC BACKGROUND:</div>
+    <h4>Primary</h4>
+    Philippine Women’s College of Davao <br>
+    <h4>Secondary</h4>
+    St. Mary’s Academy of Pasay<br>
+    <h4>Tertiary</h4>
+    FEU Institute of Technology
+  </div>
+  <p>.......................................................................................................................................</p>
+  <div class="content-block">
+    <div class="content-title">SKILLS:</div>
+    <p>As an IT professional with expertise in C++ and HTML, I possess a strong understanding of object-oriented programming concepts and web development principles. I am skilled in developing responsive websites using HTML, CSS, and JavaScript, as well as designing and implementing database-driven web applications using PHP and MySQL. Additionally, I have experience in developing desktop applications using C++ and the Qt framework, as well as optimizing database queries and automating manual processes with C++. I am a skilled problem-solver, able to troubleshoot and resolve technical issues in a timely and efficient manner. I am also a strong team player, able to collaborate with cross-functional teams to deliver high-quality projects on time and within budget.</p>
+  </div>
+</div>
+
+<script>
+  document.querySelector('.change-color').onclick = function() {
+    let resumeContainer = document.querySelector('.resume-container');
+    let isWhite = resumeContainer.style.backgroundColor === 'white' || resumeContainer.style.backgroundColor === '';
+    resumeContainer.style.backgroundColor = isWhite ? 'lightblue' : 'white';
+    this.style.backgroundColor = isWhite ? '#000' : '#555';
+    this.style.color = isWhite ? 'white' : 'black';
+  };
+</script>
+</body>
+</html>
